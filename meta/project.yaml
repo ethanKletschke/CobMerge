@@ -1,0 +1,31 @@
+# Project metadata for humans to read
+# Not used by the application at runtime
+
+project-meta:
+  project-name: CobMerge
+  author: Ethan Kletschke
+  date-started: 2026-02-16
+  last-updated: 2026-02-16
+  languages: 
+    - COBOL (GnuCOBOL)
+  status: Experimental
+  license: MIT
+  version: 0.0.1
+
+build:
+  dev-environments:
+    - Windows 11
+  test-environments: 
+    - Windows 11
+  target-platforms: 
+    - Windows 11
+    - Windows 10
+  compiler:
+    compiler-name: cobc (GnuCOBOL)
+    static-compiler: false
+    compiler-version: 3.2
+
+team:
+  author: Ethan Kletschke
+  contributors:
+    - Ethan Kletschke
