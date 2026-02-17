@@ -3,3 +3,7 @@ bin/
 
 # Build artifacts
 *.zip
+
+# Data backups
+data-backups/
+*.bak
