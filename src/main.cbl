@@ -66,6 +66,14 @@
               05 FILLER PIC X VALUE ",".
               05 MRG-User-Name PIC X(25).
 
+       FD  Output-File.
+           01 Output-Rec.
+              05 OUT-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 OUT-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 OUT-User-Name PIC X(25).
+
        PROCEDURE DIVISION.
            DISPLAY "CobMerge v0.0.1".
            STOP RUN.
