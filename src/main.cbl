@@ -16,7 +16,9 @@
            ORGANISATION LINE SEQUENTIAL
            ACCESS MODE SEQUENTIAL.
 
+      *    Merge and Sort work files
            SELECT Merge-File ASSIGN TO "Merge.csv".
+           SELECT Sort-File ASSIGN TO "Sort.csv".
 
            SELECT Out-File ASSIGN TO "Output.csv
            ORGANISATION LINE SEQUENTIAL
