@@ -75,7 +75,11 @@
               05 OUT-User-Name PIC X(25).
 
        PROCEDURE DIVISION.
-           DISPLAY "CobMerge v0.0.1".
+      *    Display the program name and temporarily stop execution until
+      *    the user presses "enter"
+           STOP "CobMerge v0.0.1".
+
+      *    Close the app
            STOP RUN.
 
        END PROGRAM CobMerge.
