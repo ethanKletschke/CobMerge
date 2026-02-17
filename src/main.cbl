@@ -4,26 +4,82 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT 1st-In-File ASSIGN TO "Input1.csv"
+           SELECT 1st-Input-File ASSIGN TO "Input1.csv"
            ORGANISATION LINE SEQUENTIAL
            ACCESS MODE SEQUENTIAL.
 
-           SELECT 2nd-In-File ASSIGN TO "Input2.csv"
+           SELECT 2nd-Input-File ASSIGN TO "Input2.csv"
            ORGANISATION LINE SEQUENTIAL
            ACCESS MODE SEQUENTIAL.
 
-           SELECT 3rd-In-File ASSIGN TO "Input3.csv"
+           SELECT 3rd-Input-File ASSIGN TO "Input3.csv"
            ORGANISATION LINE SEQUENTIAL
            ACCESS MODE SEQUENTIAL.
 
+      *    Merge and Sort work files
            SELECT Merge-File ASSIGN TO "Merge.csv".
+           SELECT Sort-File ASSIGN TO "Sort.csv".
 
-           SELECT Out-File ASSIGN TO "Output.csv
+           SELECT Output-File ASSIGN TO "Output.csv"
            ORGANISATION LINE SEQUENTIAL
            ACCESS MODE SEQUENTIAL.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD  1st-Input-File.
+           01 1st-Input-Rec.
+              05 1IF-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 1IF-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 1IF-User-Name PIC X(25).
+
+       FD  2nd-Input-File.
+           01 2nd-Input-Rec.
+              05 2IF-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 2IF-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 2IF-User-Name PIC X(25).
+
+       FD  3rd-Input-File.
+           01 3rd-Input-Rec.
+              05 3IF-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 3IF-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 3IF-User-Name PIC X(25).
+
+       SD  Sort-File.
+           01 Sort-Rec.
+              05 SRT-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 SRT-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 SRT-User-Name PIC X(25).
+
+       SD  Merge-File.
+           01 Merge-Rec.
+              05 MRG-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 MRG-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 MRG-User-Name PIC X(25).
+
+       FD  Output-File.
+           01 Output-Rec.
+              05 OUT-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 OUT-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 OUT-User-Name PIC X(25).
 
        PROCEDURE DIVISION.
-           DISPLAY "CobMerge v0.0.1".
+      *    Display the program name and temporarily stop execution until
+      *    the user presses "enter"
+           STOP "CobMerge v0.0.1".
+
+      *    Close the app
            STOP RUN.
 
        END PROGRAM CobMerge.
