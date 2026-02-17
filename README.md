@@ -8,3 +8,7 @@ A fixed-format COBOL app that merges pre-defined files.
 - Targeted Platform(s): Windows 10 and above
 - License: MIT
 - Project Metadata File: [`project.yaml`](./meta/project.yaml)
+
+## Disclaimer
+
+This program currently does nothing as of yet, other than display a message.
