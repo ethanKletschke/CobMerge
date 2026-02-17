@@ -50,6 +50,22 @@
               05 FILLER PIC X VALUE ",".
               05 3IF-User-Name PIC X(25).
 
+       SD  Sort-File.
+           01 Sort-Rec.
+              05 SRT-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 SRT-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 SRT-User-Name PIC X(25).
+
+       SD  Merge-File.
+           01 Merge-Rec.
+              05 MRG-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 MRG-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 MRG-User-Name PIC X(25).
+
        PROCEDURE DIVISION.
            DISPLAY "CobMerge v0.0.1".
            STOP RUN.
