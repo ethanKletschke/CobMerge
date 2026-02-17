@@ -24,6 +24,32 @@
            ORGANISATION LINE SEQUENTIAL
            ACCESS MODE SEQUENTIAL.
 
+       DATA DIVISION.
+       FILE SECTION.
+       FD  1st-Input-File.
+           01 1st-Input-Rec.
+              05 1IF-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 1IF-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 1IF-User-Name PIC X(25).
+
+       FD  2nd-Input-File.
+           01 2nd-Input-Rec.
+              05 2IF-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 2IF-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 2IF-User-Name PIC X(25).
+
+       FD  3rd-Input-File.
+           01 3rd-Input-Rec.
+              05 3IF-User-Num PIC 999.
+              05 FILLER PIC X VALUE ",".
+              05 3IF-User-ID PIC X(6).
+              05 FILLER PIC X VALUE ",".
+              05 3IF-User-Name PIC X(25).
+
        PROCEDURE DIVISION.
            DISPLAY "CobMerge v0.0.1".
            STOP RUN.
