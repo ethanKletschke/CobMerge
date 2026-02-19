@@ -84,6 +84,14 @@
              USING 1st-Input-File
              GIVING 1st-Input-File.
 
+           DISPLAY "Sorting 2nd Input File. Press enter to continue.".
+           ACCEPT OMITTED.
+
+           SORT Sort-File
+             ON ASCENDING KEY SRT-User-Num
+             USING 2nd-Input-File
+             GIVING 2nd-Input-File.
+
       *    Close the app
            STOP RUN.
 
