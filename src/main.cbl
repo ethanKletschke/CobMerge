@@ -105,6 +105,13 @@
            DISPLAY "Press enter to merge the 3 files' contents"
               WITH NO ADVANCING.
 
+           ACCEPT OMITTED.
+
+           MERGE Merge-File
+              ON ASCENDING KEY MRG-User-Num
+              USING 1st-Input-File 2nd-Input-File 3rd-Input-File
+              GIVING Output-File.
+
       *    Close the app
            STOP RUN.
 
