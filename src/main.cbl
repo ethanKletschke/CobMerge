@@ -75,9 +75,14 @@
               05 OUT-User-Name PIC X(25).
 
        PROCEDURE DIVISION.
-      *    Display the program name and temporarily stop execution until
-      *    the user presses "enter"
-           STOP "CobMerge v0.0.1".
+           DISPLAY "Sorting 1st Input File. This will overwrite the file
+      -    "'s contents. Press enter to continue.".
+           ACCEPT OMITTED.
+
+           SORT Sort-File
+             ON ASCENDING KEY SRT-User-Num
+             USING 1st-Input-File
+             GIVING 1st-Input-File.
 
       *    Close the app
            STOP RUN.
