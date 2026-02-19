@@ -11,4 +11,5 @@ A fixed-format COBOL app that merges pre-defined files.
 
 ## Disclaimer
 
-This program currently does nothing as of yet, other than display a message.
+This program currently sorts the user's input files (as per COBOL's merging 
+requirements), but does no merging as of yet.
