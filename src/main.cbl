@@ -76,7 +76,7 @@
 
        PROCEDURE DIVISION.
            DISPLAY "Sorting 1st Input File. This will overwrite the file
-      -    "'s contents. Press enter to continue.".
+      -    "'s contents. Press enter to continue." WITH NO ADVANCING.
            ACCEPT OMITTED.
 
            SORT Sort-File
@@ -84,7 +84,8 @@
              USING 1st-Input-File
              GIVING 1st-Input-File.
 
-           DISPLAY "Sorting 2nd Input File. Press enter to continue.".
+           DISPLAY "Sorting 2nd Input File. Press enter to continue."
+               WITH NO ADVANCING.
            ACCEPT OMITTED.
 
            SORT Sort-File
@@ -92,13 +93,13 @@
              USING 2nd-Input-File
              GIVING 2nd-Input-File.
 
-           DISPLAY "Sorting 3rd Input File. Press enter to continue.".
+           DISPLAY "Sorting 3rd Input File. Press enter to continue."
+              WITH NO ADVANCING.
            ACCEPT OMITTED.
 
            SORT Sort-File
-             ON ASCENDING KEY SRT-User-Num
-             USING 3rd-Input-File
-             GIVING 3rd-Input-File.
+           DISPLAY "Press enter to merge the 3 files' contents"
+              WITH NO ADVANCING.
 
       *    Close the app
            STOP RUN.
