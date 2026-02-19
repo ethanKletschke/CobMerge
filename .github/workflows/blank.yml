@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Compile CobMerge
+
+# Controls when the workflow will run
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  compile-cobmerge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set Up GnuCOBOL
+        uses: fabasoad/setup-cobol-action@latest
+        with:
+          version: 3.2
+      - name: Run syntax checking
+        run: cobc -I src -fsyntax-only src/*.cbl -Wall -Wextra -Wno-terminator
+      - name: Compile App
+        run: cobc -I src -x src/*.cbl -w -q
