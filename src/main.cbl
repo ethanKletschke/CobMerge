@@ -112,6 +112,9 @@
               USING 1st-Input-File 2nd-Input-File 3rd-Input-File
               GIVING Output-File.
 
+           DISPLAY "Files merged. Press Enter to Exit." 
+              WITH NO ADVANCING.
+
       *    Close the app
            STOP RUN.
 
