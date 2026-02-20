@@ -1,4 +1,4 @@
-@REM Compiles the app
+@REM Compiles the app without showing warnings
 
 cobc ^
   -I ../src ^

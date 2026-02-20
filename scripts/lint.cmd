@@ -1,4 +1,4 @@
-@REM Checks the source code's syntax
+@REM Checks the source code's syntax with extra errors
 
 cobc ^
   -I ../src ^
