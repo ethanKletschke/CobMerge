@@ -23,6 +23,10 @@ A fixed-format COBOL app that merges pre-defined files.
 This program sorts the user's input `.csv` files (as per COBOL's merging
 requirements), then merges them into a new `Output.csv` file.
 
+All you have to do is run the `.exe` in the compressed folder provided, and
+follow the prompts. Note that the CSV data files will be overwritten when
+sorted.
+
 ## Note on CSV Data Used by the Program
 
 The repo's provided `.csv` data may include duplicate user IDs but with
