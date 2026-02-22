@@ -1,7 +1,7 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. CobMerge.
 
-      /File definitions
+      *File definitions
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
@@ -25,7 +25,7 @@
            ORGANISATION LINE SEQUENTIAL
            ACCESS MODE SEQUENTIAL.
 
-      /File record definitions
+      *File record definitions
        DATA DIVISION.
        FILE SECTION.
       *    First Input file's record description
@@ -82,12 +82,13 @@
               05 FILLER PIC X VALUE ",".
               05 OUT-User-Name PIC X(25).
 
-      /Main Program Logic
+      *Main Program Logic
        PROCEDURE DIVISION.
            DISPLAY "Sorting 1st Input File. This will overwrite the file
       -    "'s contents. Press enter to continue." WITH NO ADVANCING.
            ACCEPT OMITTED.
 
+      *    Sort the first input file
            SORT Sort-File
               ON ASCENDING KEY SRT-User-Num
               USING 1st-Input-File
@@ -97,6 +98,7 @@
                WITH NO ADVANCING.
            ACCEPT OMITTED.
 
+      *    Sort the second input file
            SORT Sort-File
               ON ASCENDING KEY SRT-User-Num
               USING 2nd-Input-File
@@ -124,7 +126,7 @@
               GIVING Output-File.
 
       *    Press Enter to Exit prompt
-           DISPLAY "Files merged. Press Enter to Exit." 
+           DISPLAY "Files merged. Press Enter to Exit."
               WITH NO ADVANCING.
 
       *    Close the app
