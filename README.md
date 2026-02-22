@@ -39,3 +39,4 @@ The format of the CSV data has to be as follows, _**without headers**_:
 
 1. User Number (3 digits, including leading zeros)
 2. User ID (6-character alphanumeric string, with letters and/or digits)
+3. A 25-character user name and surname
