@@ -3,11 +3,10 @@
 
 project-meta:
   project-name: CobMerge
-  author: Ethan Kletschke
   date-started: 2026-02-16
   last-updated: 2026-02-16
   languages:
-    - COBOL (GnuCOBOL)
+    - COBOL (Fixed Format)
   status: Stable
   license: MIT
   version: 1.0.0
@@ -19,13 +18,15 @@ build:
     - Windows 11
   target-platforms:
     - Windows 11
-    - Windows 10
   compiler:
     compiler-name: cobc (GnuCOBOL)
     static-compiler: false
-    compiler-version: 3.2
+    compiler-version: 3.2.0
 
 team:
   author: Ethan Kletschke
+  owner: Ethan Kletschke
   contributors:
-    - Ethan Kletschke
+    - name: Ethan Kletschke
+      role: Author and Owner of project
+      github-username: ethanKletschke
